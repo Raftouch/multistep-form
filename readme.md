@@ -1,3 +1,4 @@
 - [x] project setup wit vite react ts
 - [x] install tailwind
-- [ ] create a custom hook
+- [x] create a custom hook
+- [ ] create forms
