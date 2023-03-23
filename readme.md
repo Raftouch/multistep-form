@@ -3,3 +3,4 @@
 - [x] create a custom hook
 - [x] create general form
 - [x] create components
+- [x] specify all form styles in a single component

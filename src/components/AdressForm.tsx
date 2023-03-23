@@ -6,7 +6,7 @@ export function AddressForm() {
             <label>City</label>
             <input type="text" required />
             <label>Zip</label>
-            <input type="number" min={1} required />
+            <input type="text" required />
         </>
     )
 }
