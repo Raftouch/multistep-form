@@ -1,15 +1,15 @@
 import { ReactNode } from "react";
 
 interface FormWrapperProps {
-    title: String,
+    title: string,
     children: ReactNode
 }
 
 export function FormWrapper({title, children}: FormWrapperProps) {
     return (
         <>
-            <h2 className="text-center mb-4">{title}</h2>
-            <div className="grid justify-start gap-2 grid-cols-2">{children}</div>
+            <h2 className="text-center mb-4 uppercase font-bold">{title}</h2>
+            <div className="grid grid-flow-row auto-rows-max md:auto-rows-min">{children}</div>
         </>
     )
 }

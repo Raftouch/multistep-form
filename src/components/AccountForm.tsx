@@ -10,12 +10,27 @@ type AccountFormProps = AccountData & {
 }
 
 export function AccountForm({email, password, updateFields}: AccountFormProps) {
+    const inputStyles="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+
     return (
         <FormWrapper title="Account Creation">
             <label>Email</label>
-            <input type="email" autoFocus required value={email} onChange={e => updateFields({email: e.target.value})}/>
+            <input 
+                className={inputStyles}
+                type="email" 
+                autoFocus 
+                required 
+                value={email} 
+                onChange={e => updateFields({email: e.target.value})}
+            />
             <label>Password</label>
-            <input type="password" required value={password} onChange={e => updateFields({password: e.target.value})}/>
+            <input 
+                className={inputStyles}
+                type="password" 
+                required 
+                value={password} 
+                onChange={e => updateFields({password: e.target.value})}
+            />
         </FormWrapper>
     )
 }

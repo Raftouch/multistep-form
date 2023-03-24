@@ -27,6 +27,7 @@ const INITIAL_DATA: FormData = {
 }
 
 function App() {
+  const buttonStyles = "shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
   const [data, setData] = useState(INITIAL_DATA)
 
   function updateFields(fields: Partial<FormData>) {
@@ -47,19 +48,26 @@ function App() {
   }
 
   return (
-    <div className="h-[300px] relative bg-white border-4 border-black p-4 m-8 rounded">
+    <div className="relative bg-white border-4 border-gray-500 p-4 m-8 rounded text-gray-500">
         <form onSubmit={onSubmit}>
           <div className="absolute top-4 right-4">
             {currentStepIndex + 1} / {steps.length}
           </div>
           {step}
-          <div className="flex gap-4 justify-end mt-52">
+          <div className="flex gap-4 justify-end mt-10">
             {!isFirstStep && (
-            <button type="button" onClick={back} className="border-2 border-black px-2 rounded">
+            <button 
+              type="button" 
+              onClick={back} 
+              className={buttonStyles}
+            >
               Back
             </button>
             )}
-            <button type="submit" className="border-2 border-black px-2 rounded">
+            <button 
+              type="submit" 
+              className={buttonStyles}
+            >
               {isLastStep ? "Finish" : "Next"}
             </button>
           </div>
