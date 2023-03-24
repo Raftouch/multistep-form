@@ -44,7 +44,8 @@ function App() {
 
   function onSubmit(e: FormEvent) {
     e.preventDefault()
-    next()
+    if (!isLastStep) return next()
+    alert("Account created successfully!")
   }
 
   return (
