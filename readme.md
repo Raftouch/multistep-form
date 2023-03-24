@@ -4,3 +4,5 @@
 - [x] create general form
 - [x] create components
 - [x] specify all form styles in a single component
+- [x] add updateFields
+- [x] update components with props

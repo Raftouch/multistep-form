@@ -8,8 +8,8 @@ interface FormWrapperProps {
 export function FormWrapper({title, children}: FormWrapperProps) {
     return (
         <>
-            <h2>{title}</h2>
-            <div>{children}</div>
+            <h2 className="text-center mb-4">{title}</h2>
+            <div className="grid justify-start gap-2 grid-cols-2">{children}</div>
         </>
     )
 }
